@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jde-carv <jde-carv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/10 18:12:34 by jde-carv          #+#    #+#             */
-/*   Updated: 2025/12/10 18:12:36 by jde-carv         ###   ########.fr       */
+/*   Created: 2025/12/13 09:58:28 by jde-carv          #+#    #+#             */
+/*   Updated: 2025/12/13 10:51:25 by jde-carv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.cpp"
+#include "Weapon.hpp"
 
-Zombie *newZombie(std::string name) {
-	Zombie *zombie = new Zombie("");
-	zombie->setName(name);
-	zombie->announce();
-	return (zombie);
-}
+Weapon::Weapon(const std::string& weapontype) : type(weapontype) {
+};
+
+std::string Weapon::getType() {
+    return type;
+};
+
+void Weapon::setType(const std::string &weapontype) {
+    type = weapontype;
+};

@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jde-carv <jde-carv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/10 18:12:44 by jde-carv          #+#    #+#             */
-/*   Updated: 2025/12/10 18:24:38 by jde-carv         ###   ########.fr       */
+/*   Created: 2025/12/13 09:07:24 by jde-carv          #+#    #+#             */
+/*   Updated: 2025/12/13 09:18:46 by jde-carv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
 
-Zombie::Zombie(std::string name) {
-	this->name = name;
+class Zombie {
+	private:
+		std::string name;
+		
+	public:
+		Zombie();
+		~Zombie();
+
+		std::string getName(void);
+		void setName(std::string name);
+
+		void announce( void );
 };
-
-Zombie::~Zombie() {};
-
-std::string Zombie::getName(void) {
-	return (this->name);
-}
-
-void Zombie::setName(std::string name) {
-	this->name = name;
-}
-
-void Zombie::announce(void) {
-	std::cout << this->name 
-	<< " : BraiiiiiiinnnzzzZ..." 
-	<< std::endl;
-}
-
