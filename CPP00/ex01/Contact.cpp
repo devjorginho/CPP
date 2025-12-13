@@ -6,7 +6,7 @@
 /*   By: jde-carv <jde-carv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 19:02:52 by jde-carv          #+#    #+#             */
-/*   Updated: 2025/12/13 12:54:12 by jde-carv         ###   ########.fr       */
+/*   Updated: 2025/12/13 13:33:22 by jde-carv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ Contact::Contact(
 Contact::Contact() {
 	this->first_name = "";
 	this->last_name = "";
-	this->last_name = "";
-	this->last_name = "";
-	this->last_name = "";
+	this->nickname = "";
+	this->phone_number = "";
+	this->darkest_secret = "";
 };
 
 Contact::~Contact() {};
