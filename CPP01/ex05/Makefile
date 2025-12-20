@@ -1,7 +1,8 @@
-NAME  = replace
+NAME  = complain
 CC	  = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
-SRC   = main.cpp
+SRC   = Harl.cpp \
+		main.cpp
 
 OBJS  = $(SRC:.cpp=.o)
 
