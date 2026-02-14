@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jde-carv <jde-carv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/20 17:57:04 by jde-carv          #+#    #+#             */
-/*   Updated: 2026/01/03 07:05:44 by jde-carv         ###   ########.fr       */
+/*   Created: 2026/01/24 10:41:59 by jde-carv          #+#    #+#             */
+/*   Updated: 2026/01/24 12:10:58 by jde-carv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
-int main() {
-	Harl HarlObject;
-	
-	HarlObject.complain("DEBUG");
-	HarlObject.complain("INFO");
-	HarlObject.complain("WARNING");
-	HarlObject.complain("ERROR");
-	return 0;
-}
+class Fixed {
+	private:
+		int rawBitsRepresentation;
+		static const int fractionalBitsCount = 8;
+		
+	public:
+		Fixed();
+		Fixed(const Fixed &other);
+		Fixed& operator=(const Fixed &other);
+		~Fixed();
+
+		int getRawBits( void ) const;
+		void setRawBits( int const raw );
+};
+
+#endif

@@ -5,19 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jde-carv <jde-carv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/20 17:57:04 by jde-carv          #+#    #+#             */
-/*   Updated: 2026/01/03 07:05:44 by jde-carv         ###   ########.fr       */
+/*   Created: 2026/01/24 12:12:31 by jde-carv          #+#    #+#             */
+/*   Updated: 2026/01/24 12:17:50 by jde-carv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include "Fixed.hpp"
+#include <iostream>
 
-int main() {
-	Harl HarlObject;
+int main( void ) {
+	Fixed a;
+	Fixed b( a );
+	Fixed c;
+
+	c = b;
+
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
 	
-	HarlObject.complain("DEBUG");
-	HarlObject.complain("INFO");
-	HarlObject.complain("WARNING");
-	HarlObject.complain("ERROR");
 	return 0;
 }
