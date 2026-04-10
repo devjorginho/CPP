@@ -1,0 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: devjorginho <devjorginho@student.42.fr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/24 10:42:01 by jde-carv          #+#    #+#             */
+/*   Updated: 2026/04/10 14:07:10 by devjorginho      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Cat.hpp"
+
+Cat::Cat() {
+	this->type = "Cat";
+	std::cout << "CAT DEFAULT CONSTRUCTOR" << std::endl;
+};
+
+Cat::Cat(const Cat &other) {
+	this->type = other.type;
+	std::cout << "CAT COPY CONSTRUCTOR" << std::endl;
+};
+
+Cat& Cat::operator=(const Cat &other) {
+	if (this != &other) {
+		this->type = other.type;
+	}
+	std::cout << "CAT COPY ASSIGNMENT OPERATOR" << std::endl;
+	return *this;
+};
+
+Cat::~Cat() {
+	std::cout << "CAT DESTRUCTOR" << std::endl;
+};
+
+void Cat::makeSound() const {
+	std::cout << "MEOW MEOW!" << std::endl;
+}
